@@ -1,11 +1,11 @@
-# Forens — Windows Forensic Collection Tool
+# Forens — Windows Artifacts Collection Tool
 
 > **One command, 40 forensic sources, full chain-of-custody.** A modular,
 > read-only Windows forensic collector targeting .NET Framework 4.6.2
 > (runs unchanged on Windows 7 SP1 through Windows 11 24H2).
 
 ```cmd
-forens collect --output C:\Investigations\Case42 --keyword "cmd.exe" --keyword "bypass"
+forens collect --output C:\Investigations\Case42 --keyword "powershell.exe" --keyword "bypass"
 ```
 
 → Collects from every applicable artifact source, hashes every output,
@@ -389,47 +389,6 @@ pulls automatically), the tree builds on any Windows host with the
 
 ---
 
-## Project layout
-
-```
-forens/
-├── src/
-│   ├── Forens.Common/      # logging, host info, time, helpers (no Forens.Core deps)
-│   ├── Forens.Core/        # IArtifactSource, scheduler, runner, manifest, all 40 collectors
-│   ├── Forens.Reporting/   # ReportModel + JSON + self-contained HTML writers
-│   └── Forens.Cli/         # forens.exe — CommandLineUtils-driven subcommands
-├── tests/
-│   ├── Forens.Core.Tests/
-│   ├── Forens.Reporting.Tests/
-│   └── Forens.Integration.Tests/
-├── docs/
-│   └── USAGE.md            # operator-facing reference (every flag, every example)
-├── examples/
-│   ├── triage-process-list.ps1
-│   ├── dry-run-summary.ps1
-│   └── verify-integrity.ps1
-├── specs/
-│   ├── 001-modular-collectors/   # spec, plan, contracts, tasks for the architecture
-│   └── 002-collector-catalog/    # spec, plan, tasks for the 40-source catalog
-└── .specify/
-    └── memory/constitution.md    # project principles (read-only on target, dual-format reports, etc.)
-```
-
----
-
-## Documentation
-
-| Doc | Audience |
-|-----|----------|
-| [`docs/USAGE.md`](docs/USAGE.md) | Operators / forensic analysts — every CLI flag, every example, full output schemas |
-| [`specs/001-modular-collectors/quickstart.md`](specs/001-modular-collectors/quickstart.md) | Developers — adding a new artifact source |
-| [`specs/001-modular-collectors/contracts/cli.md`](specs/001-modular-collectors/contracts/cli.md) | CLI contract reference |
-| [`specs/001-modular-collectors/contracts/IArtifactSource.md`](specs/001-modular-collectors/contracts/IArtifactSource.md) | Internal contract every source implements |
-| [`specs/001-modular-collectors/contracts/manifest-schema.json`](specs/001-modular-collectors/contracts/manifest-schema.json) | JSON Schema for `manifest.json` |
-| [`specs/001-modular-collectors/contracts/report-schema.json`](specs/001-modular-collectors/contracts/report-schema.json) | JSON Schema for `report.json` |
-| [`.specify/memory/constitution.md`](.specify/memory/constitution.md) | Project principles (read-only on target, no hashes/secrets, dual-format reports, .NET 4.6.2 pinned, etc.) |
-
----
 
 ## Project principles (excerpt from constitution)
 
@@ -455,14 +414,6 @@ forens/
 
 ---
 
-## Status
-
-Active development. Catalog at 40 sources; spec coverage from the
-original feature input is substantively complete. See
-[`specs/002-collector-catalog/tasks.md`](specs/002-collector-catalog/tasks.md)
-for the full chunk-by-chunk delivery history.
-
----
 
 ## License
 
