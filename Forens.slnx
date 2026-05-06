@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Forens.Cli/Forens.Cli.csproj" />
+    <Project Path="src/Forens.Common/Forens.Common.csproj" />
+    <Project Path="src/Forens.Core/Forens.Core.csproj" />
+    <Project Path="src/Forens.Reporting/Forens.Reporting.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Forens.Core.Tests/Forens.Core.Tests.csproj" />
+    <Project Path="tests/Forens.Integration.Tests/Forens.Integration.Tests.csproj" />
+    <Project Path="tests/Forens.Reporting.Tests/Forens.Reporting.Tests.csproj" />
+  </Folder>
+</Solution>

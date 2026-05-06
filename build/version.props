@@ -1,0 +1,17 @@
+<Project>
+
+  <PropertyGroup>
+    <ForensVersion Condition="'$(ForensVersion)' == ''">0.1.0</ForensVersion>
+    <Version>$(ForensVersion)</Version>
+    <AssemblyVersion>$(ForensVersion).0</AssemblyVersion>
+    <FileVersion>$(ForensVersion).0</FileVersion>
+    <GitCommit Condition="'$(GitCommit)' == ''">unknown</GitCommit>
+    <InformationalVersion>$(ForensVersion)+$(GitCommit)</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AssemblyMetadata Include="GitCommit" Value="$(GitCommit)" />
+    <AssemblyMetadata Include="TargetFramework" Value="$(TargetFramework)" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,43 @@
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+.vs/
+*.user
+*.suo
+
+# NuGet
+packages/
+*.nupkg
+.nuget/
+
+# Test
+TestResults/
+coverage/
+*.trx
+*.coverage
+
+# Tool output
+forens-out/
+*.evtx.tmp
+build/perf-baseline.md
+build/manual-validation.md
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
+.claude/
+.specify/
+.specify
+.claude
+specs/
+USAGE.md
+*.ps1
+.vs/
+CLAUDE.md
+out/

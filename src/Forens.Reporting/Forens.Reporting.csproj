@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Forens.Reporting</RootNamespace>
+    <AssemblyName>Forens.Reporting</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Forens.Common\Forens.Common.csproj" />
+    <ProjectReference Include="..\Forens.Core\Forens.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\report.css" />
+    <EmbeddedResource Include="Resources\report.js" />
+  </ItemGroup>
+
+</Project>

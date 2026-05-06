@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Forens.Cli</RootNamespace>
+    <AssemblyName>forens</AssemblyName>
+    <StartupObject>Forens.Cli.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Forens.Common\Forens.Common.csproj" />
+    <ProjectReference Include="..\Forens.Core\Forens.Core.csproj" />
+    <ProjectReference Include="..\Forens.Reporting\Forens.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Formatting.Compact" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
